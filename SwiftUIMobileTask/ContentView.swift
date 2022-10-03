@@ -8,9 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject private var viewModel = LoginViewModel()
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack(spacing: 18) {
+            EntryField(placeholder: "Email", prompt: "", field: $viewModel.email)
+            EntryField(placeholder: "Password", prompt: "", field: $viewModel.password)
+            
+            Button {
+                
+            } label: {
+                 Text("Login")
+            }
+            .frame(maxWidth: .infinity)
+            .foregroundColor(Color.white)
+            .padding(.vertical)
+            .background(RoundedRectangle(cornerRadius: 8, style: .continuous).fill(Color.black).opacity(0.8))
+        
+        }
+        .padding()
     }
 }
 
