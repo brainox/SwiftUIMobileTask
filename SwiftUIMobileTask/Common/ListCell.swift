@@ -13,7 +13,7 @@ struct ListCell: View {
     
     var body: some View {
         HStack(alignment: .center, spacing: 10) {
-            WebImage(url: URL(string: person.picture.large))
+            WebImage(url: URL(string: person.picture?.large ?? ""))
                 .placeholder(Image(systemName: "photo"))
                 .placeholder {
                         Rectangle().foregroundColor(.gray)
@@ -25,8 +25,8 @@ struct ListCell: View {
             
 //                    .frame(width:80, height: 80, alignment: .center)
                         VStack(alignment: .leading, spacing: 10) {
-                Text("\(person.name.first) \(person.name.last)")
-                Text(person.email)
+                            Text("\(person.name?.first ?? "") \(person.name?.last ?? "")")
+                Text(person.email ?? "")
                 
             }
                         .padding(.horizontal)

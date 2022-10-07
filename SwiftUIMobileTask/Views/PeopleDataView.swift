@@ -10,19 +10,21 @@ import SDWebImageSwiftUI
 
 struct PeopleDataView: View {
     @EnvironmentObject var authentication: Authentication
-    @StateObject var personDataViewModel = PersonDataViewModel()
+    @StateObject var personDataListViewModel = PersonDataListViewModel()
     @State private var search = ""
+//    @StateObject private var personDataListViewModel = PersonDataListViewModel()
     var body: some View {
         VStack {
-            List(personDataViewModel.personDataObjectList) { person in
+            List(personDataListViewModel.personDataObjectList) { person in
                 ListCell(person: person)
             }
             .listStyle(GroupedListStyle())
+//            ForEach(personDataListViewModel.personDataObjectList, id: \.Self) {
+//                    Text("\($0)…")
+//                }
         }
         .navigationBarTitle(Text("Search"), displayMode: .inline)
         .searchable(text: $search)
-           
-            
         
     }
 }

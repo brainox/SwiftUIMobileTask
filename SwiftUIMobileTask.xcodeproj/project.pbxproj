@@ -15,7 +15,7 @@
 		BE02A0CD28EF6DB700196CD8 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = BE02A0CC28EF6DB700196CD8 /* SDWebImageSwiftUI */; };
 		BE02A0CF28EF7AC200196CD8 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE02A0CE28EF7AC200196CD8 /* ListCell.swift */; };
 		BE02A0D128EF7CEB00196CD8 /* PersonDataObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE02A0D028EF7CEB00196CD8 /* PersonDataObject.swift */; };
-		BE02A0D328EF888F00196CD8 /* PersonDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE02A0D228EF888F00196CD8 /* PersonDataViewModel.swift */; };
+		BE02A0D328EF888F00196CD8 /* PersonDataListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE02A0D228EF888F00196CD8 /* PersonDataListViewModel.swift */; };
 		BE02A0D528EF8B2400196CD8 /* MockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE02A0D428EF8B2400196CD8 /* MockService.swift */; };
 		BE529E6728EAE29B00A5C63D /* SwiftUIMobileTaskApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE529E6628EAE29B00A5C63D /* SwiftUIMobileTaskApp.swift */; };
 		BE529E6928EAE29B00A5C63D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE529E6828EAE29B00A5C63D /* ContentView.swift */; };
@@ -33,7 +33,7 @@
 		BE02A0C828EF02B300196CD8 /* PeopleDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleDataView.swift; sourceTree = "<group>"; };
 		BE02A0CE28EF7AC200196CD8 /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
 		BE02A0D028EF7CEB00196CD8 /* PersonDataObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDataObject.swift; sourceTree = "<group>"; };
-		BE02A0D228EF888F00196CD8 /* PersonDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDataViewModel.swift; sourceTree = "<group>"; };
+		BE02A0D228EF888F00196CD8 /* PersonDataListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDataListViewModel.swift; sourceTree = "<group>"; };
 		BE02A0D428EF8B2400196CD8 /* MockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockService.swift; sourceTree = "<group>"; };
 		BE529E6328EAE29B00A5C63D /* SwiftUIMobileTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIMobileTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE529E6628EAE29B00A5C63D /* SwiftUIMobileTaskApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIMobileTaskApp.swift; sourceTree = "<group>"; };
@@ -80,7 +80,7 @@
 				BE529E6828EAE29B00A5C63D /* ContentView.swift */,
 				BE529E7628EAE78D00A5C63D /* LoginViewModel.swift */,
 				BE02A0C828EF02B300196CD8 /* PeopleDataView.swift */,
-				BE02A0D228EF888F00196CD8 /* PersonDataViewModel.swift */,
+				BE02A0D228EF888F00196CD8 /* PersonDataListViewModel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -219,7 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE529E7728EAE78D00A5C63D /* LoginViewModel.swift in Sources */,
-				BE02A0D328EF888F00196CD8 /* PersonDataViewModel.swift in Sources */,
+				BE02A0D328EF888F00196CD8 /* PersonDataListViewModel.swift in Sources */,
 				BE529E6928EAE29B00A5C63D /* ContentView.swift in Sources */,
 				BE02A0D128EF7CEB00196CD8 /* PersonDataObject.swift in Sources */,
 				BE02A0C528EEE8E500196CD8 /* UIApplication+Extension.swift in Sources */,
