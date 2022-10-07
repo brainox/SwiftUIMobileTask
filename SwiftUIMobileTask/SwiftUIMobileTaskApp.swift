@@ -9,9 +9,17 @@ import SwiftUI
 
 @main
 struct SwiftUIMobileTaskApp: App {
+    @StateObject var authentication = Authentication()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if !authentication.isValidated {
+                ContentView()
+                    .environmentObject(authentication)
+            } else {
+                PeopleDataView()
+                    .environmentObject(authentication)
+            }
         }
     }
 }

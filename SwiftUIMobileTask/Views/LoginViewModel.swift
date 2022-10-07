@@ -9,12 +9,17 @@ import Foundation
 import Combine
 
 class LoginViewModel: ObservableObject {
+    @Published var error: Authentication.AuthenticationError?
+    @Published var credentials = Credentials()
+    
     @Published var email         = ""
     @Published var password      = ""
     
     @Published var isEmailCriteriaValid      = false
     @Published var isPasswordCriteriaValid   = false
     @Published var canSubmit                 = false
+    @Published var showProgressView          = false
+    
     private var cancellableSet: Set<AnyCancellable> = []
     
     let emailPredicate = NSPredicate(format: "SELF MATCHES %@", "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}")
@@ -43,6 +48,10 @@ class LoginViewModel: ObservableObject {
             .store(in: &cancellableSet)
     }
     
+    var loginDisabled: Bool {
+        isEmailCriteriaValid && isPasswordCriteriaValid
+    }
+    
     var emailPrompt: String {
         isEmailCriteriaValid ?
         ""
@@ -57,6 +66,28 @@ class LoginViewModel: ObservableObject {
         "Must be at least 8 characters"
     }
     
+    func login() {
+        print("Logging in \(email)")
+        email = ""
+        password = ""
+    }
+//
     
+//    func login(completion: @escaping (Bool) -> Void) {
+//        showProgressView = true
+//        
+//        ApiService.shared.login(credentials: credentials) { [unowned self] (result: Result<Bool, Authentication.AuthenticationError>) in
+//            showProgressView = false
+//            
+//            switch result {
+//            case .success:
+//                completion(true)
+//            case .failure(let authError):
+//                credentials = Credentials()
+//                error = authError
+//                completion(false)
+//            }
+//        }
+//    }
     
 }
