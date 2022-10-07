@@ -17,6 +17,7 @@
 		BE02A0D128EF7CEB00196CD8 /* PersonDataObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE02A0D028EF7CEB00196CD8 /* PersonDataObject.swift */; };
 		BE02A0D328EF888F00196CD8 /* PersonDataListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE02A0D228EF888F00196CD8 /* PersonDataListViewModel.swift */; };
 		BE02A0D528EF8B2400196CD8 /* MockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE02A0D428EF8B2400196CD8 /* MockService.swift */; };
+		BE0EFF7528F096EA007DB362 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0EFF7428F096EA007DB362 /* ApiError.swift */; };
 		BE529E6728EAE29B00A5C63D /* SwiftUIMobileTaskApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE529E6628EAE29B00A5C63D /* SwiftUIMobileTaskApp.swift */; };
 		BE529E6928EAE29B00A5C63D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE529E6828EAE29B00A5C63D /* ContentView.swift */; };
 		BE529E6B28EAE29E00A5C63D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE529E6A28EAE29E00A5C63D /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 		BE02A0D028EF7CEB00196CD8 /* PersonDataObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDataObject.swift; sourceTree = "<group>"; };
 		BE02A0D228EF888F00196CD8 /* PersonDataListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDataListViewModel.swift; sourceTree = "<group>"; };
 		BE02A0D428EF8B2400196CD8 /* MockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockService.swift; sourceTree = "<group>"; };
+		BE0EFF7428F096EA007DB362 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		BE529E6328EAE29B00A5C63D /* SwiftUIMobileTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIMobileTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE529E6628EAE29B00A5C63D /* SwiftUIMobileTaskApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIMobileTaskApp.swift; sourceTree = "<group>"; };
 		BE529E6828EAE29B00A5C63D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 			children = (
 				BE529E6628EAE29B00A5C63D /* SwiftUIMobileTaskApp.swift */,
 				BE02A0BD28EEE11900196CD8 /* Authentication.swift */,
+				BE0EFF7428F096EA007DB362 /* ApiError.swift */,
 				BE02A0BC28EEE10200196CD8 /* Views */,
 				BE02A0BB28EEE0FA00196CD8 /* Model */,
 				BE02A0BA28EEE0E300196CD8 /* Services */,
@@ -225,6 +228,7 @@
 				BE02A0C528EEE8E500196CD8 /* UIApplication+Extension.swift in Sources */,
 				BE02A0CF28EF7AC200196CD8 /* ListCell.swift in Sources */,
 				BE02A0C128EEE8A200196CD8 /* ApiService.swift in Sources */,
+				BE0EFF7528F096EA007DB362 /* ApiError.swift in Sources */,
 				BE02A0D528EF8B2400196CD8 /* MockService.swift in Sources */,
 				BE02A0C328EEE8BD00196CD8 /* Credentials.swift in Sources */,
 				BE02A0C928EF02B300196CD8 /* PeopleDataView.swift in Sources */,

@@ -12,13 +12,22 @@ struct PeopleDataView: View {
     @EnvironmentObject var authentication: Authentication
     @StateObject var personDataListViewModel = PersonDataListViewModel()
     @State private var search = ""
+    
+    var listData: [PersonDataObject] {
+        if (personDataListViewModel.searchTerm.isEmpty) {
+            return personDataListViewModel.personDataObjectList
+        } else {
+            return personDataListViewModel.searchResults
+        }
+    }
     var body: some View {
         ZStack {
             VStack {
-                List(personDataListViewModel.personDataObjectList) { person in
+                List(listData) { person in
                     ListCell(person: person)
                 }
                 .listStyle(GroupedListStyle())
+                .animation(.default, value: personDataListViewModel.searchTerm)
             }
             .navigationBarTitle(Text("Search"), displayMode: .inline)
             .alert(item: $personDataListViewModel.appError) { appAlert in
@@ -27,7 +36,8 @@ struct PeopleDataView: View {
                             Please try again later!
                             """))
             }
-        .searchable(text: $search)
+            .searchable(text: $personDataListViewModel.searchTerm, placement: .navigationBarDrawer(displayMode: .always))
+          
             if personDataListViewModel.isLoading {
                 ZStack {
                     Color(.white)

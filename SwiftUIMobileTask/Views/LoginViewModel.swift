@@ -23,7 +23,7 @@ class LoginViewModel: ObservableObject {
     private var cancellableSet: Set<AnyCancellable> = []
     
     let emailPredicate = NSPredicate(format: "SELF MATCHES %@", "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}")
-    let passwordPredicate = NSPredicate(format: "SELF MATCHES %@", "[A-Za-z]{8,}$")
+    let passwordPredicate = NSPredicate(format: "SELF MATCHES %@", "[A-Za-z]{6,}$")
     
     init() {
         $email
@@ -63,7 +63,7 @@ class LoginViewModel: ObservableObject {
         isPasswordCriteriaValid ?
         ""
         :
-        "Must be at least 8 characters"
+        "Must be at least 6 characters"
     }
     
     func login() {

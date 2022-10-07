@@ -9,20 +9,19 @@ import Foundation
 
 class PersonDataListViewModel: ObservableObject {
     
-    struct AppError: Identifiable {
-        let id = UUID().uuidString
-        let errorString: String
-    }
-
     @Published var personDataObjectList: [PersonDataObject] = []
+    @Published var searchResults: [PersonDataObject] = []
     @Published var appError: AppError? = nil
     @Published var isLoading: Bool = false
+    @Published var searchTerm = ""
     var tempPersonDataStore: [PersonDataObject] = []
 
     init() {
         for _ in (0 ... 2) {
             getPersonData()
         }
+        
+        filterPersonDataList()
     }
 
     func getPersonData() {
@@ -46,6 +45,19 @@ class PersonDataListViewModel: ObservableObject {
                 }
             }
         })
+    }
+    
+    func filterPersonDataList() {
+        $searchTerm
+            .map { searchTerm in
+                self.personDataObjectList.filter({ person in
+                    let fullName =
+                    (person.name?.first.lowercased() ?? "") + (person.name?.last.lowercased() ?? "")
+                    return fullName.contains(searchTerm.lowercased())
+
+                })
+            }
+            .assign(to: &$searchResults)
     }
 }
 
