@@ -23,22 +23,10 @@ struct LoginView: View {
     
     var body: some View {
         NavigationView {
-            VStack(spacing: 18) {
-//                EntryField(placeholder: "Email", prompt: loginVM.emailPrompt, field: $loginVM.email)
-//                EntryField(placeholder: "Password", prompt: loginVM.passwordPrompt, field: $loginVM.password)
+            VStack(spacing: 18)                 
+                EntryField(placeholder: "Email", prompt: loginVM.emailError?.errorDescription ?? "", isPassword: false, borderColor: loginVM.emailErrorBorderColor, field: $loginVM.email)
                 
-//                NavigationLink(destination: PersonDataView()) {
-//                    Text("Login")
-//                        .bold()
-//                        .frame(maxWidth: .infinity, maxHeight: 50)
-//                        .background(RoundedRectangle(cornerRadius: 8, style: .continuous).fill(Color.black).opacity(0.8))
-//                    .foregroundColor(Color.white)
-//                }
-//                .disabled(!loginVM.loginDisabled)
-                
-                EntryField(placeholder: "Email", prompt: loginVM.emailError?.errorDescription ?? "", isPassword: false, field: $loginVM.email)
-                
-                EntryField(placeholder: "Password", prompt: loginVM.passwordError?.errorDescription ?? "", isPassword: true, field: $loginVM.password)
+                EntryField(placeholder: "Password", prompt: loginVM.passwordError?.errorDescription ?? "", isPassword: true, borderColor: loginVM.passwordErrorBorderColor, field: $loginVM.password)
                 
                 NavigationLink(destination: PersonDataView(), isActive: $isLinkActive) {
                     Button ( action: {

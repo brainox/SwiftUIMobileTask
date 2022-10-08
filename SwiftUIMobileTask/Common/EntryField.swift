@@ -11,6 +11,7 @@ struct EntryField: View {
     var placeholder: String
     var prompt: String
     var isPassword: Bool
+    var borderColor: Color
     @Binding var field: String
     //    @Binding var textFieldModel: TextFieldModel
     
@@ -22,14 +23,14 @@ struct EntryField: View {
                     .textInputAutocapitalization(.never)
                     .padding(8)
                     .background(Color(.secondarySystemBackground))
-                    .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.secondary, lineWidth: 1))
+                    .overlay(RoundedRectangle(cornerRadius: 8).stroke(borderColor, lineWidth: 1))
             } else {
                 TextField(placeholder, text: $field)
                     .font(.body)
                     .textInputAutocapitalization(.never)
                     .padding(8)
                     .background(Color(.secondarySystemBackground))
-                    .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.secondary, lineWidth: 1))
+                    .overlay(RoundedRectangle(cornerRadius: 8).stroke(borderColor, lineWidth: 1))
             }
         
             Text(prompt)
@@ -42,6 +43,6 @@ struct EntryField: View {
 
 struct EntryField_Previews: PreviewProvider {
     static var previews: some View {
-        EntryField(placeholder: "Email", prompt: "Enter a valid email", isPassword: false, field: .constant(""))
+        EntryField(placeholder: "Email", prompt: "Enter a valid email", isPassword: false, borderColor: Color(.secondarySystemBackground), field: .constant(""))
     }
 }
