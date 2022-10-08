@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct AppError: Identifiable {
+struct ApiError: Identifiable {
     let id = UUID().uuidString
     let errorString: String
 }

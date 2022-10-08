@@ -8,8 +8,7 @@
 import SwiftUI
 import SDWebImageSwiftUI
 
-struct PeopleDataView: View {
-    @EnvironmentObject var authentication: Authentication
+struct PersonDataView: View {
     @StateObject var personDataListViewModel = PersonDataListViewModel()
     @State private var search = ""
     
@@ -30,7 +29,7 @@ struct PeopleDataView: View {
                 .animation(.default, value: personDataListViewModel.searchTerm)
             }
             .navigationBarTitle(Text("Search"), displayMode: .inline)
-            .alert(item: $personDataListViewModel.appError) { appAlert in
+            .alert(item: $personDataListViewModel.apiError) { appAlert in
                 Alert(title: Text("Error"), message: Text("""
                             \(appAlert.errorString)
                             Please try again later!
@@ -50,14 +49,16 @@ struct PeopleDataView: View {
                         .shadow(radius: 10)
                 }
             }
+            
+            
         }
        
         
     }
 }
 
-struct RandomListView_Previews: PreviewProvider {
+struct PersonDataView_Previews: PreviewProvider {
     static var previews: some View {
-        PeopleDataView()
+        PersonDataView()
     }
 }
