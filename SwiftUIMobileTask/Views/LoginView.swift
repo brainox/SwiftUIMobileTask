@@ -23,7 +23,7 @@ struct LoginView: View {
     
     var body: some View {
         NavigationView {
-            VStack(spacing: 18)                 
+            VStack(spacing: 18) {
                 EntryField(placeholder: "Email", prompt: loginVM.emailError?.errorDescription ?? "", isPassword: false, borderColor: loginVM.emailErrorBorderColor, field: $loginVM.email)
                 
                 EntryField(placeholder: "Password", prompt: loginVM.passwordError?.errorDescription ?? "", isPassword: true, borderColor: loginVM.passwordErrorBorderColor, field: $loginVM.password)
@@ -47,6 +47,7 @@ struct LoginView: View {
         }
     }
 }
+
 
 struct LoginViewView_Previews: PreviewProvider {
     static var previews: some View {
