@@ -24,7 +24,7 @@ enum LoginError: Error, LocalizedError {
         case .passwordEmpty:
             return "Password cannot be empty!"
         case .passwordInvalid:
-            return "Invalid password format"
+            return "Password must be a minimum of 6 characters"
             
         }
     }
