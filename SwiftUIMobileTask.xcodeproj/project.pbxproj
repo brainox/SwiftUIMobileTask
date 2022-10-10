@@ -17,7 +17,6 @@
 		BE02A0D328EF888F00196CD8 /* PersonDataListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE02A0D228EF888F00196CD8 /* PersonDataListViewModel.swift */; };
 		BE02A0D528EF8B2400196CD8 /* MockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE02A0D428EF8B2400196CD8 /* MockService.swift */; };
 		BE0EFF7528F096EA007DB362 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0EFF7428F096EA007DB362 /* ApiError.swift */; };
-		BE0EFF7728F0DE34007DB362 /* TextFieldModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0EFF7628F0DE34007DB362 /* TextFieldModel.swift */; };
 		BE0EFF7928F20617007DB362 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0EFF7828F20617007DB362 /* String+Extension.swift */; };
 		BE0EFF7C28F23024007DB362 /* PersonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0EFF7B28F23024007DB362 /* PersonViewModel.swift */; };
 		BE529E6728EAE29B00A5C63D /* SwiftUIMobileTaskApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE529E6628EAE29B00A5C63D /* SwiftUIMobileTaskApp.swift */; };
@@ -38,7 +37,6 @@
 		BE02A0D228EF888F00196CD8 /* PersonDataListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDataListViewModel.swift; sourceTree = "<group>"; };
 		BE02A0D428EF8B2400196CD8 /* MockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockService.swift; sourceTree = "<group>"; };
 		BE0EFF7428F096EA007DB362 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
-		BE0EFF7628F0DE34007DB362 /* TextFieldModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldModel.swift; sourceTree = "<group>"; };
 		BE0EFF7828F20617007DB362 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		BE0EFF7B28F23024007DB362 /* PersonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewModel.swift; sourceTree = "<group>"; };
 		BE529E6328EAE29B00A5C63D /* SwiftUIMobileTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIMobileTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,7 +73,6 @@
 			isa = PBXGroup;
 			children = (
 				BE02A0D028EF7CEB00196CD8 /* PersonDataObject.swift */,
-				BE0EFF7628F0DE34007DB362 /* TextFieldModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -240,7 +237,6 @@
 				BE02A0D328EF888F00196CD8 /* PersonDataListViewModel.swift in Sources */,
 				BE0EFF7C28F23024007DB362 /* PersonViewModel.swift in Sources */,
 				BE529E6928EAE29B00A5C63D /* LoginView.swift in Sources */,
-				BE0EFF7728F0DE34007DB362 /* TextFieldModel.swift in Sources */,
 				BE02A0D128EF7CEB00196CD8 /* PersonDataObject.swift in Sources */,
 				BE02A0C528EEE8E500196CD8 /* UIApplication+Extension.swift in Sources */,
 				BE02A0CF28EF7AC200196CD8 /* ListCell.swift in Sources */,

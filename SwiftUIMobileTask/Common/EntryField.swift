@@ -13,7 +13,6 @@ struct EntryField: View {
     var isPassword: Bool
     var borderColor: Color
     @Binding var field: String
-    //    @Binding var textFieldModel: TextFieldModel
     
     var body: some View {
         VStack(alignment: .leading) {
