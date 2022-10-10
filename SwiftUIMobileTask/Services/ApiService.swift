@@ -42,32 +42,5 @@ class ApiService {
                 completion(.success(decodedData))
             }
             .store(in: &cancellables)
-
-        
-//        URLSession.shared.dataTask(with: request) { (data, response, error) in
-//            if let error = error {
-//                completion(.failure(.error("Error: \(error.localizedDescription)")))
-//                return
-//            }
-//
-//            guard let data = data else {
-//                completion(.failure(.error(NSLocalizedString("Error: Data is corrupt.", comment: ""))))
-//                return
-//            }
-//
-//
-////            let a = JSONSerialization.jsonObject(with: data, options: [])
-//
-//            let decoder = JSONDecoder()
-//
-////            decoder.keyDecodingStrategy = .convertFromSnakeCase
-//            do {
-//                let decodedData = try decoder.decode(T.self, from: data)
-//                completion(.success(decodedData))
-//            } catch let decodingError {
-//                completion(.failure(.error("Error: \(decodingError.localizedDescription)")))
-//            }
-//
-//        }.resume()
     }
 }
